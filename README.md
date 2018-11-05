@@ -55,7 +55,7 @@ signs data set:
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the training data distributed:
 
-![training data set distribution][./save figures/training_hist.png]
+<img src="./save figures/training_hist.png" width="480" />
 
 ### Design and Test a Model Architecture
 
@@ -65,11 +65,11 @@ As a first step, I decided to convert the images to grayscale because it is much
 
 Here is an example of a traffic sign image before and after grayscaling.
 
-![gray scale][./save figures/gray-scale.png]
+<img src="./save figures/gray-scale.png" width="480" />
 
 As a last step, I normalized the image data because the initial gray scale figures may vary a lot that could decrease the accurancy of training. 
 
-![normalized][./save figures/normalized.png]
+<img src="./save figures/normalized.png" width="480" />
 
 And due to it is highly ordered data set when considering the class, if I put this kind of data set into training, it may influence a lot how the training will perform in the test data. So I shuffled the training data before put them into the model.
 
@@ -111,8 +111,13 @@ My final model results were:
 
 Here are five German traffic signs that I found on the web:
 
-![Right-of-way at the next intersection][./GermanSignTest/1.png] ![Speed limit (30km/h)][./GermanSignTest/2.png] ![Keep right][./GermanSignTest/5.png] 
-![Turn left ahead][./GermanSignTest/6.png] ![General caution][./GermanSignTest/8.png] ![Road work][./GermanSignTest/9.png]
+<img src="./GermanSignTest/1.png" width="480" />
+<img src="./GermanSignTest/2.png" width="480" />
+<img src="./GermanSignTest/5.png" width="480" />
+<img src="./GermanSignTest/6.png" width="480" />
+<img src="./GermanSignTest/8.png" width="480" />
+<img src="./GermanSignTest/9.png" width="480" />
+
 
 The first image might be difficult to classify because the traffic sign itself is very similar to other signs so it would be hard to distringuish this sign from the others. The second image is different because the model should correctly distinguish the angle of the arrow in the sign so that it can give the right prediction. And this sign itself is similar to other turning signs. The third image is diffcult is that there are multiple speed limit signs as potential prediction. SO the model should calculate the edge of the number correctly so that a right prediction can be given. The forth sign is diffcult because itself is similar to the "keep right" sign. So the model may have diffculty getting the right angle of the arrow. The fifth sign is diffculty is that this sign is reletively too simple. So that the detection may be influenced by many other conditions, and the model should subtrack those conditions and get the right prediction eventually. The last figure is hard for it is on the opposite of the fifth sign. This one is too complacated so that the model should detect the edges very carefully so that it can get the right prediction.
 
